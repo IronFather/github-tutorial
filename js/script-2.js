@@ -253,8 +253,107 @@
 // console.log(smallestNumber);
 
 // ЗАДАЧА СШИТЬ ЭЛЕМЕНТЫ МАССИВА В ОДНО СТРОКОВОЕ ЗНАЧЕНИЕ
+// // ВАРИАНТ НЕПРАВИЛЬНЫЙ (SLICE)
 
-const friends = ["mango", "kiwi", "poly", "ajax"];
-const allIncl = friends.splice;
+// const friends = ["mango", "kiwi", "poly", "ajax"];
+// let string = ``;
 
-console.log(allIncl);
+// for (const friend of friends) {
+// string += friend + `,`
+// }
+
+// string = string.slice(0, string.length - 1);
+// console.log(string);
+
+// // ВАРИАНТ ПРАВИЛЬНЫЙ (JOIN)
+
+// const friends = ["mango", "kiwi", "poly", "ajax"];
+// const string = friends.join(`,`)
+
+// console.log(string);
+
+// // ЗАДАЧА ЗАМЕНИТЬ РЕГИСТР КАЖДОГО СИМВОЛА НА ПРОТИВОПОЛОЖНЫЙ
+// // ВАРИАНТ 1 (OLD SCHOOL)
+
+// const string = `JavaScript`;
+// const letters = string.split(``);
+// let invertedString = ``;
+
+// console.log(letters);
+
+// for(const letter of letters) {
+//     console.log(letter);
+
+//     if(letter === letter.toLowerCase()) {
+//         console.log('Эта буква в нижнем регистре! - ', letter);
+
+//         invertedString += letter.toUpperCase()
+//     }
+//     else {
+//         invertedString += letter.toLowerCase()
+//     }
+
+//     console.log(invertedString);
+// }
+
+// // ВАРИАНТ 2 (ТЕРНАЛЬНЫЙ ОПЕРАТОР)
+
+// const string = `JavaScript`;
+// const letters = string.split(``);
+// let invertedString = ``;
+
+// console.log(letters);
+
+// for(const letter of letters) {
+//     console.log(letter);
+
+//     // добавляем переменную isEqual для лучшей читаемости
+//     const isEqual = letter === letter.toLowerCase();
+
+//     invertedString += isEqual ? letter.toUpperCase() : letter.toLowerCase()
+
+// }
+
+// console.log(invertedString);
+
+// // ЗАДАЧА СДЕЛАТЬ SLUG В URL ИЗ НАЗВАНИЯ СТРОКИ
+
+// const title = `Top 10 benefits of React framework`;
+// // const normalizeTitle = title.toLowerCase();
+// // const words = normalizeTitle.split(` `);
+// // const slug = words.join(`-`)
+
+// // console.log(slug);
+
+// // ЦЕПОЧКИ ВЫЗОВОВ
+// // это декоративный код или абстракция, когда код по сути закрыт
+
+// const slug = title.toLowerCase().split(` `).join(`-`);
+// console.log(slug);
+
+// ЗАДАЧА СУММА ЭЛЕМЕНТОВ ДВУХ МАССИВОВ
+const array1 = [2, 6, 8, 9];
+const array2 = [21, 16, 38, 94];
+let total = 0;
+
+// // ВАРИАНТ 1 (НЕПРАВИЛЬНЫЙ)
+// for(let i = 0; i < array1.length; i += 1) {
+//     total += array1[i];
+// }
+
+// for(let i = 0; i < array2.length; i += 1) {
+//     total += array2[i];
+// }
+
+// console.log(total);
+
+// // ВАРИАНТ 2 (ПРАВИЛЬНЫЙ)
+
+// const numbers = array1.concat(array2);
+// console.log(numbers);
+
+// for(const number of numbers) {
+// total += number;
+// }
+
+// console.log(total);
