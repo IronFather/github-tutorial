@@ -170,7 +170,7 @@
 //     console.log("Такого количества звезд нет");
 // }
 
-// // 2_SWITCH
+// 2_SWITCH
 // switch (stars) {
 //     case 1:
 //     case 2:
@@ -326,34 +326,38 @@
 
 // !!!!!!!!!!! ПРАВИЛО !!!!!!!!!! Скобки [ обозначают включительно. Скобки ( не включают число, стоящее после или перед этой скобкой
 
-// ЗАДАЧА ДИСКОНТ В ЗАВИСИМОСТИ ОТ
+// // ЗАДАЧА ДИСКОНТ В ЗАВИСИМОСТИ ОТ
 
-let totalSpent = 5300;
-let payment = 500;
-let discount = 0;
-   
-if (totalSpent >= 100 && totalSpent < 1000) {
-    console.log('Скидка 2%');
-    discount = 0.02;
-}
-else if (totalSpent >= 1000 && totalSpent < 5000) {
-    console.log('Скидка 5%');
-    discount = 0.05;
-}
-else if (totalSpent >= 5000) {
-    console.log('Скидка 10%');
-    discount = 0.1;
-}
+// let totalSpent = 5300;
+// let payment = 500;
+// let discount = 0;
 
-else {
-    console.log('Скидка не предусмотрена');
-    discount = 0;
-}
+// if (totalSpent >= 100 && totalSpent < 1000) {
+//     console.log('Скидка 2%');
+//     discount = 0.02;
+// }
+// else if (totalSpent >= 1000 && totalSpent < 5000) {
+//     console.log('Скидка 5%');
+//     discount = 0.05;
+// }
+// else if (totalSpent >= 5000) {
+//     console.log('Скидка 10%');
+//     discount = 0.1;
+// }
 
-payment = payment - payment * discount
+// else {
+//     console.log('Скидка не предусмотрена');
+//     discount = 0;
+// }
 
-console.log(`Оформляем заказ на сумму ${payment} со скидкой ${discount * 100}%`);
+// payment = payment - payment * discount
 
-totalSpent += payment;
+// console.log(`Оформляем заказ на сумму ${payment} со скидкой ${discount * 100}%`);
 
-console.log(totalSpent);
+// totalSpent += payment;
+
+// console.log(totalSpent);
+
+// const friends = ["a", "b", "c"];
+
+
