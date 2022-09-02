@@ -503,21 +503,55 @@
 
     // ЗАДАЧА - ФИЛЬТЕР ПОВТОРЯЮЩИХСЯ ЧИСЕЛ В МАССИВЕ И АРГУМЕНТАХ, КОТОРЫЕ ВЫЗЫВАЮТСЯ ОДНОЙ ФУНКЦИЕЙ ОДНОВРЕМЕННО
 
-    const filterNumbers = function(array, ...args) {
-        console.log('array', array);
-        console.log(`args`, args);
-        const newArray = [];
+    // const filterNumbers = function(array, ...args) {
+    //     console.log('array', array);
+    //     console.log(`args`, args);
+    //     const newArray = [];
 
-        for(const element of array) {
-            console.log(element);
+    //     for(const element of array) {
+    //         console.log(element);
 
-            if(args.includes(element)) {
-                newArray.push(element);
-                console.log(`${element} есть везде!`);
-            }
-        }
+    //         if(args.includes(element)) {
+    //             newArray.push(element);
+    //             console.log(`${element} есть везде!`);
+    //         }
+    //     }
 
-        return newArray;
-    }
+    //     return newArray;
+    // }
 
-    console.log(filterNumbers([1, 4, 5, 9], 56, 4, 33, 42, 9));
+    // console.log(filterNumbers([1, 4, 5, 9], 56, 4, 33, 42, 9));
+
+    // // ПАРАМЕТРЫ ПО УМОЛЧАНИЮ
+
+    // let greetUser = function(userName = `Vova`) {
+    //     console.log(`Hello ${userName}`);
+    // }
+
+    // greetUser();
+    // greetUser(`Sara`)
+
+//     // ЗАДАЧА - ЗАМЕНА В КОМАНДЕ (!!! ПОЧЕМУ-ТО НЕ РАБОТАЕТ ФУНКЦИЯ !!!)
+// const team = [`Yura`, `Anton`, `Myhaylo`, `Andriy Do`, `Andriy Du`];
+
+// function changePlayer(team, playerToFindName, newPlayer) {
+    
+//     for (let player of team) {
+        
+//         if (player === playerToFindName) {
+//             let index = team.indexOf(player);
+//             player[index] = newPlayer;
+//             console.log(`found: `, index);
+//         }
+//     }
+
+//     return team;
+// }
+
+// const result = changePlayer(team, `Myhaylo`, `Denis`);
+
+// ПРОВЕРКА МАССИВА
+// console.log(Array.isArray(arguments));
+
+// arguments НЕТ В СТРЕЛОЧНЫХ ФУНКЦИЯХ
+
