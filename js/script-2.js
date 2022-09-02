@@ -331,10 +331,10 @@
 // const slug = title.toLowerCase().split(` `).join(`-`);
 // console.log(slug);
 
-// ЗАДАЧА СУММА ЭЛЕМЕНТОВ ДВУХ МАССИВОВ
-const array1 = [2, 6, 8, 9];
-const array2 = [21, 16, 38, 94];
-let total = 0;
+// // ЗАДАЧА СУММА ЭЛЕМЕНТОВ ДВУХ МАССИВОВ
+// const array1 = [2, 6, 8, 9];
+// const array2 = [21, 16, 38, 94];
+// let total = 0;
 
 // // ВАРИАНТ 1 (НЕПРАВИЛЬНЫЙ)
 // for(let i = 0; i < array1.length; i += 1) {
@@ -358,17 +358,17 @@ let total = 0;
 
 // console.log(total);
 
-// ЗАДАЧА КОЛЛЕКЦИЯ КАРТОЧЕК В TRELLO
+// // ЗАДАЧА КОЛЛЕКЦИЯ КАРТОЧЕК В TRELLO
 
-const cards = [
-    `Карточка-1`,
-    `Карточка-2`,
-    `Карточка-3`,
-    `Карточка-4`,
-    `Карточка-5`,
-]
+// const cards = [
+//     `Карточка-1`,
+//     `Карточка-2`,
+//     `Карточка-3`,
+//     `Карточка-4`,
+//     `Карточка-5`,
+// ]
 
-console.table(cards);
+// console.table(cards);
 
 // // УДАЛИТЬ КАРТОЧКУ
 // const cardToRemove =  `Карточка-3`;
@@ -386,8 +386,138 @@ console.table(cards);
 // cards.splice(index, 0, cardToInsert);
 // console.table(cards);
 
-// ОБНОВИТЬ/ЗАМЕНИТЬ КАРТОЧКУ
-const cardToUpdate =  `Карточка-7`;
-const index = 0;
-cards.splice(index, 1, cardToUpdate);
-console.table(cards);
+// // ОБНОВИТЬ/ЗАМЕНИТЬ КАРТОЧКУ
+// const cardToUpdate =  `Карточка-7`;
+// const index = 0;
+// cards.splice(index, 1, cardToUpdate);
+// console.table(cards);
+
+// ФУНКЦИИ
+// Объявить функцию => купить/создать мясорубку
+// Вызвать функцию => включить мясорубку
+// Повторное использование кода
+
+// функциональное выражение
+// const add = function() {}
+// при объявлении функция не работает (не включена мясорубка/не вызвана функция)
+// параметры - значения внутри скобок функции, аргументы - значения во время вызова функции
+
+// const add = function(x, y) {
+//     console.log(x);
+//     console.log(y);
+
+// console.log(`Работает add`);
+
+// // return = возврат вовне результата из функции для отображения в результате вызова функции
+// // фарш на выходе после перемалывания мяса (аргументов) 
+// return x + y;
+// }
+
+// // аргументы в скобках = мясо
+// add(5, 7)
+// const rl1 = add(23, 48)
+// console.log(`result:`, rl1);
+
+// const rl2 = add(45, 72)
+// console.log(`result:`, rl2);
+
+// const rl3 = add(345, 115)
+// console.log(`result:`, rl3);
+
+// // return полностью прерывает функцию
+
+// ЗАДАЧА НАПИСАТЬ ФУНКЦИЮ calculateTotalPrice
+// 1 ТАК БЫЛО
+// const carts = [24, 54, 654, 32, 43, 17, 85, 65, 64, 23, 98, 3, 64, 32, 54, 36, 75]
+
+// let total = 0;
+
+// for(const cart of carts) {
+//     total += cart;
+//     console.log(cart);
+// }
+
+// console.log('Total', total);
+
+// // 1 ТАК ДЕЛАЕМ ЧЕРЕЗ ФУНКЦИЮ
+// const calculateTotalPrice = function(items){
+//     console.log(`items внутри функции`, items);
+
+//     let total = 0;
+
+// for(const item of items) {
+//     total += item;
+//     }
+
+// return total;
+// }
+
+// console.log(calculateTotalPrice([23, 45, 65, 76]));
+// console.log(calculateTotalPrice([34, 345, 231]));
+// console.log(calculateTotalPrice([235 ,4, 33, 46]));
+
+// // ФУНКЦИИ БЕЗ RETURN ВОЗМОЖНЫ (ПОЛУЧИТЬ МАССИВ, ПЕРЕБРАТЬ, ЛОГИРОВАТЬ В КОНСОЛЬ)
+
+// const logItems = function (items) {
+//     for(const item of items)
+//     console.log(item);
+// }
+
+// // ТЕРНАРНЫЙ ОПЕРАТОР ЧЕРЕЗ RETURN
+// // логины вне функции где-то вверху
+// const logins = [`fvfvkfv`, `vfevf`, `vfvv`];
+
+// const findLogin = function (allLogins, loginToFind) {
+//     return allLogins.includes(loginToFind) ? `Пользователь найден' : 'Пользователь не найден';
+// };
+
+// console.log(findLogin(logins, `fevgrbrgbg`));
+// // тут вызов logins по сути перезаписует logins в allLogins
+
+// ФУНКЦИЯ НАЙТИ НАИМЕНЬШЕЕ ЧИСЛО
+
+// const findSmallestNumber = function(numbers) {
+//     let smallestNumber = numbers[0];
+
+//     for(const number of numbers) {
+//         if (number < smallestNumber) {
+//             smallestNumber = number;
+//         }
+//         return smallestNumber;
+//     }
+
+    // arguments - встроенная локальная переменная, ПСЕВДОМАССИВ который не имеет всех методов массива 
+    // Применяют, например, когда несколько массивов с разным количеством элементов
+
+    // ПРЕОБРАЗОВАНИЕ АРГУМЕНТОВ (ARGUMENTS) КАК ПСЕВДОМАССИВА В МАССИВ
+
+    // OLD CHOOL - Array.from() 
+
+    // СОВРЕМЕННЫЙ СИНТАКСИС - rest (ВСЕГДА В КОНЦЕ)
+    // function(..."после точек идет название переменной")
+
+    // ВАРИАНТ РАЗДЕЛЕНИЯ АРГУМЕНТОВ НА ПАРАМЕТРЫ (НАПРИМЕР СТРОКУ) И МАССИВ ОТДЕЛЬНО
+    // function(a, b, c ...args)
+    // console.log(`${a}, ${b}, ${c}`);
+    // console.log(args);
+
+    // ЗАДАЧА - ФИЛЬТЕР ПОВТОРЯЮЩИХСЯ ЧИСЕЛ В МАССИВЕ И АРГУМЕНТАХ, КОТОРЫЕ ВЫЗЫВАЮТСЯ ОДНОЙ ФУНКЦИЕЙ ОДНОВРЕМЕННО
+
+    const filterNumbers = function(array, ...args) {
+        console.log('array', array);
+        console.log(`args`, args);
+        const newArray = [];
+
+        for(const element of array) {
+            console.log(element);
+
+            if(args.includes(element)) {
+                newArray.push(element);
+                console.log(`${element} есть везде!`);
+            }
+        }
+
+        return newArray;
+    }
+
+    console.log(filterNumbers([1, 4, 5, 9], 56, 4, 33, 42, 9));
