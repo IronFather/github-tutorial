@@ -162,6 +162,49 @@
 // // getTrackCount после добавления трека
 // console.log(playlist.getTrackCount());
 
+// ПЕРЕБОР МАССИВОВ
 // for ...in лучше не юзать, он бесполезен
 
+const feedback = {
+    good: 5,
+    neutral: 10,
+    bad: 3,
+}
+
+let totalFeedback = 0;
+
+// // 1) ВОЗВРАТ КЛЮЧЕЙ ЧЕРЕЗ Object.keys()
+// const keys = Object.keys(feedback);
+// console.table(keys);
+
+// for(const key of keys) {
+//     console.log(key);
+//     console.log(feedback[key]);
+
+//     totalFeedback += feedback[key];
+// }
+
+// // ПОЛУЧИТЬ ЗНАЧЕНИЯ КЛЮЧЕЙ
+// // 1. НЕПРАВИЛЬНО
+// // console.log(feedback.key); key разыскивается среди ключей (имен свойств good, neutral и bad) т.к. key -это имя переменной
+
+// // 2.ПРАВИЛЬНО
+// // console.log(feedback[key])
+
+
+// console.log('totalFeedback', totalFeedback);
+
+// // 2) ВОЗВРАТ КЛЮЧЕЙ ЧЕРЕЗ Object.values()
+
+// const values = Object.values(feedback);
+
+// console.log(values);
+
+// for(const value of values) {
+//     console.log(value);
+
+//     totalFeedback += value;
+// }
+
+// console.log(`totalFeedback`, totalFeedback);
 
