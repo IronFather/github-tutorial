@@ -39,7 +39,7 @@
 // const propertyTracks = `tracks`;
 // console.log(playlist[propertyTracks]);
 
-// СОКРАЩЕНИЕ КОГДА КЛЮЧ И СВОЙСТВО ДУЮЛИРУЮТСЯ
+// СОКРАЩЕНИЕ КОГДА КЛЮЧ И СВОЙСТВО ДУБЛИРУЮТСЯ
 
 // const username = `Mango`;
 // const email =  `mango@gmail.com`;
@@ -64,6 +64,8 @@
 // }
 
 // console.log(smtData);
+
+// =================================================================================================
 
 // // ДОБАВЛЕНИЕ/ПЕРЕОПРЕДЕЛЕНИЕ СВОЙСТВ
 // const playlist = {
@@ -117,6 +119,8 @@
 
 // олд скул -   getName: function() { // современный синтаксис   getName() {
 
+// =================================================================================================
+
 // // ЗАДАЧА ПОМЕНЯТЬ НАЗВАНИЕ В name
 // // в мптодах обїекта нельзя использовать имя самого объекта
 
@@ -162,6 +166,8 @@
 // // getTrackCount после добавления трека
 // console.log(playlist.getTrackCount());
 
+// =================================================================================================
+
 // ПЕРЕБОР МАССИВОВ
 // for ...in лучше не юзать, он бесполезен
 
@@ -183,6 +189,8 @@
 
 //     totalFeedback += feedback[key];
 // }
+
+// =================================================================================================
 
 // // ПОЛУЧИТЬ ЗНАЧЕНИЯ КЛЮЧЕЙ
 // // 1. НЕПРАВИЛЬНО
@@ -207,6 +215,8 @@
 // }
 
 // console.log(`totalFeedback`, totalFeedback);
+
+// =================================================================================================
 
 // // МАССИВ ОБЪЕКТОВ
 
@@ -253,6 +263,8 @@
 // console.log(findFriendByName(friends, `Chelsy`));
 // // includes не подходит, он работает только с примитивами, а у нас объекты в массиве
 
+// =================================================================================================
+
 // // ЗАДАЧА ПОЛУЧИТЬ ВСЕ ИМЕНА ДРУЗЕЙ
 
 // const friends = [
@@ -284,3 +296,100 @@
 
 // console.log(getAllName(friends));
 
+// =================================================================================================
+
+// // ЗАДАЧА ПОЛУЧИТЬ ВСЕ ИМЕНА ДРУЗЕЙ, КТО В ОНЛАЙН
+
+// const friends = [
+//     { name: `Mango`, online: false},
+//     { name: `Kivi`, online: true},
+//     { name: `Poly`, online: false},
+//     { name: `Ajax`, online: true},
+// ]
+
+// console.table(friends);
+
+// const getOnlineFriends = function(allFriends) {
+//     // перебрать объекты в массиве
+//     //         // НО ВНАЧАЛЕ СОЗДАТЬ ПУСТОЙ МАССИВ
+//     const onlineFriends = [];
+//         for(const friend of allFriends) {
+//         console.log(friend.online);
+
+//             if (friend.online) {
+//                 // УКАЗЫВАТЬ === true - ПЛОХАЯ ПРАКТИКА
+//             onlineFriends.push(friend);
+//             }
+//         }
+
+//     return onlineFriends;
+//     }
+
+// console.log(getOnlineFriends(friends));
+
+// =================================================================================================
+
+// // ЗАДАЧА ПОЛУЧИТЬ ВСЕ ИМЕНА ДРУЗЕЙ, КТО В ОФЛАЙН
+
+// const friends = [
+//     { name: `Mango`, online: false},
+//     { name: `Kivi`, online: true},
+//     { name: `Poly`, online: false},
+//     { name: `Ajax`, online: true},
+// ]
+
+// console.table(friends);
+
+// const getOfflineFriends = function(allFriends) {
+//     // перебрать объекты в массиве
+//     //         // НО ВНАЧАЛЕ СОЗДАТЬ ПУСТОЙ МАССИВ
+//     const offlineFriends = [];
+//         for(const friend of allFriends) {
+//         console.log(friend.online);
+
+//             if (!friend.online) {
+//                 // УКАЗЫВАТЬ === false - ПЛОХАЯ ПРАКТИКА
+//             offlineFriends.push(friend);
+//             }
+//         }
+
+//     return offlineFriends;
+//     }
+
+// console.log(getOfflineFriends(friends));
+
+// =================================================================================================
+
+// // ЗАДАЧА ПОЛУЧИТЬ ВСЕ ИМЕНА ДРУЗЕЙ ПО СТАТУСУ ОНЛАЙН (ДВА МАССИВА)
+
+const friends = [
+    { name: `Mango`, online: false},
+    { name: `Kivi`, online: true},
+    { name: `Poly`, online: false},
+    { name: `Ajax`, online: true},
+]
+
+console.table(friends);
+
+const getFriendsByStatusOnline = function(allFriends) {
+//     // перебрать объекты в массиве
+//     //         // НО ВНАЧАЛЕ СОЗДАТЬ ДВА ПУСТЫХ МАССИВА
+    const FriendsByStatusOnline = {
+        online: [],
+        offline: [],
+    };
+        for (const friend of allFriends) {
+        console.log(friend.online);
+
+            if (friend.online) {
+                // УКАЗЫВАТЬ === false - ПЛОХАЯ ПРАКТИКА
+            FriendsByStatusOnline.online.push(friend);
+            } else {
+                FriendsByStatusOnline.offline.push(friend);
+            }
+        }
+
+    return FriendsByStatusOnline;
+    }
+
+console.log(getFriendsByStatusOnline(friends));
