@@ -165,13 +165,13 @@
 // ПЕРЕБОР МАССИВОВ
 // for ...in лучше не юзать, он бесполезен
 
-const feedback = {
-    good: 5,
-    neutral: 10,
-    bad: 3,
-}
+// const feedback = {
+//     good: 5,
+//     neutral: 10,
+//     bad: 3,
+// }
 
-let totalFeedback = 0;
+// let totalFeedback = 0;
 
 // // 1) ВОЗВРАТ КЛЮЧЕЙ ЧЕРЕЗ Object.keys()
 // const keys = Object.keys(feedback);
@@ -207,4 +207,80 @@ let totalFeedback = 0;
 // }
 
 // console.log(`totalFeedback`, totalFeedback);
+
+// // МАССИВ ОБЪЕКТОВ
+
+// const friends = [
+//     { name: `Mango`, online: false},
+//     { name: `Kivi`, online: true},
+//     { name: `Poly`, online: false},
+//     { name: `Ajax`, online: false},
+// ]
+
+// console.table(friends);
+
+
+// for(const friend of friends) {
+//     console.log(friend); 
+//     // перебор пообъектно!!!
+
+//     friend.newprop = 555;
+// // friend.newprop - добавил свойство newprop со значением 555 КАЖДОМУ ОБЪЕКТУ
+// // ПОТОМУ ЧТО в массиве объектов в for of мы получаем ссылку на каждый объект
+
+// // можно получить...
+// console.log(friend.name); 
+// }
+
+// // ЗАДАЧА НАЙТИ ДРУГА ПО ИМЕНИ
+// const findFriendByName = function (allFriends, name) {
+// // перебрать объекты
+// for(const friend of allFriends) {
+//     console.log(friend);
+//     // но можна перебрать по именам... 
+//     console.log(friend.name);
+
+//     //  дальше if
+//         if(friend.name === name) {
+//             return `НАШЛИ!!!` 
+//         } 
+//     }
+
+//     return `НЕ НАШЛИ!!!`
+// }
+
+// console.log(findFriendByName(friends, `Poly`));
+// console.log(findFriendByName(friends, `Chelsy`));
+// // includes не подходит, он работает только с примитивами, а у нас объекты в массиве
+
+// // ЗАДАЧА ПОЛУЧИТЬ ВСЕ ИМЕНА ДРУЗЕЙ
+
+// const friends = [
+//     { name: `Mango`, online: false},
+//     { name: `Kivi`, online: true},
+//     { name: `Poly`, online: false},
+//     { name: `Ajax`, online: false},
+// ]
+
+// console.table(friends);
+
+// const getAllName = function(allFriends) {
+//     // перебрать объекты в массиве
+//         // НО ВНАЧАЛЕ СОЗДАТЬ ПУСТОЙ МАССИВ
+//     const names = [];
+
+//     for(const friend of allFriends) {
+//     // console.log(friend);
+//     // можно сразу перебрать объекты в массиве по именам
+//     console.log(friend.name);
+//     // добавляем имена в созданный пустой массив names 
+//     names.push(friend.name);
+//     }
+
+//     // console.log(names);
+//     // но можна и через return
+//     return names;
+// }
+
+// console.log(getAllName(friends));
 
