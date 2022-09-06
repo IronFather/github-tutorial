@@ -360,36 +360,41 @@
 
 // =================================================================================================
 
-// // ЗАДАЧА ПОЛУЧИТЬ ВСЕ ИМЕНА ДРУЗЕЙ ПО СТАТУСУ ОНЛАЙН (ДВА МАССИВА)
+// // // ЗАДАЧА ПОЛУЧИТЬ ВСЕ ИМЕНА ДРУЗЕЙ ПО СТАТУСУ ОНЛАЙН (ДВА МАССИВА)
 
-const friends = [
-    { name: `Mango`, online: false},
-    { name: `Kivi`, online: true},
-    { name: `Poly`, online: false},
-    { name: `Ajax`, online: true},
-]
+// const friends = [
+//     { name: `Mango`, online: false},
+//     { name: `Kivi`, online: true},
+//     { name: `Poly`, online: false},
+//     { name: `Ajax`, online: true},
+// ]
 
-console.table(friends);
+// console.table(friends);
 
-const getFriendsByStatusOnline = function(allFriends) {
-//     // перебрать объекты в массиве
-//     //         // НО ВНАЧАЛЕ СОЗДАТЬ ДВА ПУСТЫХ МАССИВА
-    const FriendsByStatusOnline = {
-        online: [],
-        offline: [],
-    };
-        for (const friend of allFriends) {
-        console.log(friend.online);
+// const getFriendsByStatusOnline = function(allFriends) {
+// //     // перебрать объекты в массиве
+// //     //         // НО ВНАЧАЛЕ СОЗДАТЬ ДВА ПУСТЫХ МАССИВА
+//     const FriendsByStatusOnline = {
+//         online: [],
+//         offline: [],
+//     };
+//         for (const friend of allFriends) {
+//         console.log(friend.online);
 
-            if (friend.online) {
-                // УКАЗЫВАТЬ === false - ПЛОХАЯ ПРАКТИКА
-            FriendsByStatusOnline.online.push(friend);
-            } else {
-                FriendsByStatusOnline.offline.push(friend);
-            }
-        }
+//             if (friend.online) {
+//                 // УКАЗЫВАТЬ === false - ПЛОХАЯ ПРАКТИКА
+//             FriendsByStatusOnline.online.push(friend);
+//             continue;
+//             } 
+//                 FriendsByStatusOnline.offline.push(friend);
+//             }
+//         }
 
-    return FriendsByStatusOnline;
-    }
+//     return FriendsByStatusOnline;
+//     }
 
-console.log(getFriendsByStatusOnline(friends));
+// console.log(getFriendsByStatusOnline(friends));
+
+// OpenCart CMS - opencart.com - готовые решения для кодинга интернет-магазинов
+
+// "Найти галеру" (А.Репета) - найти работу )))))))))
