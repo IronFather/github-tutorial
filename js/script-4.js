@@ -320,38 +320,239 @@
 
 // ======================================================================================
 
+// EVERY и SOME
 
+// const players = [
+//     { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: true },
+//     { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: false },
+//     { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true },
+//     { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+//     { id: 'player-5', name: 'Chelsy', timePlayed: 280, points: 48, online: true },
+//   ];
+  
+//   /*
+//    * Array.prototype.every()
+//    * - Поэлементо перебирает оригинальный массив
+//    * - Возвращает true если все элементы массива удовлетворяют условию
+//    */
+  
+//   const isAllOnline = players.every(player => player.online);
+//   console.log('isAllOnline: ', isAllOnline);
+  
+//   /*
+//    * Array.prototype.some()
+//    * - Поэлементо перебирает оригинальный массив
+//    * - Возвращает true если хотя бы один элемент массива удовлетворяет условию
+//    */
+//   const isAnyOnline = players.some(player => player.online);
+//   console.log('isAnyOnline: ', isAnyOnline);
+  
+//   const anyHardcorePlayers = players.some(player => player.timePlayed > 400);
+//   console.log('anyHardcorePlayers: ', anyHardcorePlayers);
 
 
 // ======================================================================================
 
+// REDUCE - ШВЕЙЦАРСКИЙ НОЖ ДЛЯ РАБОТЫ С КОЛЛЕКЦИЕЙ
+// БЕРЕТ МНОГО - ВЫДАЕТ ЧТО-ТО ОДНО
 
+/*
+ * Array.prototype.reduce()
+ * - Поэлементо перебирает оригинальный массив
+ * - Возвращает что угодно 🤯
+ * - Заменяет всё на свете, но использовать нужно с умом
+ */
 
+// const numbers = [5, 10, 15, 20, 25];
 
+// const total = numbers.reduce((acc, number) => acc + number, 0);
+// console.log(total);
 
+// accumulator = 0 -> number = 5 -> return 0 + 5
+// accumulator = 5 -> number = 10 -> return 5 + 10
+// accumulator = 15 -> number = 15 -> return 15 + 15
+// accumulator = 30 -> number = 20 -> return 30 + 20
+// accumulator = 50 -> number = 25 -> return 50 + 25
 
+/*
+ * Считаем общую зарплату
+ */
 
+// const salary = {
+//   mango: 100,
+//   poly: 50,
+//   ajax: 150,
+// };
 
+// const totalSalary = Object.values(salary).reduce(
+//   (total, value) => total + value,
+//   0,
+// );
+// console.log(totalSalary);
 
+/*
+ * Считаем общее количество часов
+ */
 
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, online: false },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, online: true },
+//   { id: 'player-3', name: 'Kiwi', timePlayed: 230, online: true },
+//   { id: 'player-4', name: 'Ajax', timePlayed: 150, online: false },
+//   { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
+// ];
 
+// const totalTimePlayed = players.reduce(
+//   (totalTime, player) => totalTime + player.timePlayed,
+//   0,
+// );
 
+// console.log(totalTimePlayed);
 
+/*
+ * Считаем общую сумму товаров корзины
+ */
+// const cart = [
+//   { label: 'Apples', price: 100, quantity: 2 },
+//   { label: 'Bananas', price: 120, quantity: 3 },
+//   { label: 'Lemons', price: 70, quantity: 4 },
+// ];
 
+// const totalAmount = cart.reduce(
+//   (total, { price, quantity }) => total + price * quantity,
+//   0,
+// );
 
+// // console.log(totalAmount);
 
+// /*
+//  * Собираем все теги из твитов
+//  */
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
 
+// const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
+// console.log(allTags);
 
+// // acc = [], tweet.tags = ['js', 'nodejs'] return [...[], ...['js', 'nodejs']]
+// // acc = ['js', 'nodejs'] tweet.tags ['html', 'css']
+// // return  [...['js', 'nodejs'], ...['html', 'css']]
+// //  ['js', 'nodejs', 'html', 'css']
 
+// /*
+//  * Ведём статистику тегов
+//  */
+// // const tagsStats = allTags.reduce((acc, tag) => {
+// //   console.log(acc);
 
+// //   if (acc[tag]) {
+// //     acc[tag] += 1;
 
+// //     return acc;
+// //   }
 
+// //   acc[tag] = 1;
 
+// //   return acc;
+// // }, {});
 
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// }, {});
+// // console.log(tagsStats);
 
+// // если свойство с ключом tag есть. увеличить его значение на 1
+// // если свойствоства нет с таким ключом что в tag, сделать и записать 1
 
+// ======================================================================================
 
+// SORT
+// КАК ПРАВИЛО ДЛЯ СОРТИРОВКИ НЕБОЛЬШИХ МАССИВОВ Т.К. СРАВНИВАЕТ БЛИЗЛЕЖАЩИЕ ЭЛЕМЕНТЫ ПОПАРНО (ТРУДОЗАТРАТНО)
+// SORT в отличии от фильтра не выкидывает часть отобраного, он сортирует (меняет местами) элементы
 
+/*
+ * Array.prototype.sort(callback(currentEl, nextEl){})
+ * - Сортирует и ИЗМЕНЯЕТ оригинальный массив
+ * - По умолчанию:
+ *    - сортирует по возрастанию
+ *    - приводит элементы к строке и сортирует по [Unicode](https://unicode-table.com/en/)
+ */
+
+// const numbers = [1, 9, 6, 2, 3];
+// numbers.sort();
+// console.log('numbers', numbers);
+
+// const letters = ['b', 'B', 'a', 'A'];
+// letters.sort();
+// console.log('letters', letters);
+
+/*
+ * compareFunction - функция сравнения (callback)
+ * Элементы массива сортируются в соответствии с её возвращаемым значением
+ *  - eсли compareFunction(A, B) меньше 0, сортировка поставит A перед B
+ *  - если compareFunction(A, B) больше 0, сортировка поставит B перед A
+ *  - если compareFunction(A, B) вернёт 0, сортировка оставит A и B на неизменными по отношению друг к другу, но отсортирует их по отношению ко всем другим элементам.
+ */
+
+// numbers.sort((curEl, nextEl) => {
+//     return nextEl - curEl;
+// });
+
+/*
+ * Как сделать копию массива чтобы не сортировать оригинальный
+ * - Array.prototype.slice()
+ * - Операция spread
+ */
+
+// const descSortedNumbers = [...numbers].sort((a, b) => b - a);
+// const ascSortedNumbers = [...numbers].sort((a, b) => a - b);
+// console.log('descSortedNumbers', descSortedNumbers);
+// console.log('ascSortedNumbers', ascSortedNumbers);
+
+/*
+//  * Кастомная сортировка сложных типов
+//  */
+// const players = [
+//     { id: 'player-1', name: 'Mango', timePlayed: 310, online: false },
+//     { id: 'player-2', name: 'Poly', timePlayed: 470, online: true },
+//     { id: 'player-3', name: 'Aiwi', timePlayed: 230, online: true },
+//     { id: 'player-4', name: 'Ajax', timePlayed: 150, online: false },
+//     { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
+// ];
+
+// // По игровому времени
+// const sortedByBestPlayers = [...players].sort(
+//     (prevPlayer, nextPlayer) => nextPlayer.timePlayed - prevPlayer.timePlayed,
+// );
+// // console.table(sortedByBestPlayers);
+
+// const sortedByWorstPlayers = [...players].sort(
+//     (prevPlayer, nextPlayer) => prevPlayer.timePlayed - nextPlayer.timePlayed,
+// );
+// // console.table(sortedByWorstPlayers);
+
+// const byName = [...players].sort((a, b) => {
+//     const result = a.name[0] > b.name[0];
+
+//     if (result) {
+//         return 1;
+//     }
+
+//     if (!result) {
+//         return -1;
+//     }
+// });
+
+// console.table(byName);
+// ======================================================================================
 
 // ПЕРЕБИРАЮЩИЕ МЕТОДЫ
 
@@ -406,3 +607,4 @@
 //   // ['математика', 'физика', 'информатика', 'математика', 'физика', 'биология'];
 
 // =================================================================================================
+
