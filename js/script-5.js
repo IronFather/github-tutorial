@@ -701,9 +701,216 @@
 
 // =====================================================================================================================
 
-// ПОРЯДОК ЭЛЕМЕНТОВ В КЛАССЕ
-// 1. ВСЕ СТАТИЧЕСКИЕ СВОЙСТВА И МЕТОДЫ (!!!! ststic + ТОЧКА С ЗАПЯТОЙ В КОНЦЕ)
+// ПОРЯДОК ЭЛЕМЕНТОВ В КЛАССЕ (CODE COLLACATION)
+// 1. ВСЕ СТАТИЧЕСКИЕ СВОЙСТВА И МЕТОДЫ (!!!! ststic + ТОЧКА С ЗАПЯТОЙ В КОНЦЕ ТОЛЬКО ПОСЛЕ СВОЙСТВ)
 // 2. КОНСТРУКТОР
 // 3. ОСТАЛЬНЫЕ МЕТОДЫ
 
 // =====================================================================================================================
+
+// СТАТИЧЕСКИЕ СВОЙСТВА НА КЛАССЕ, ПРИВАТНЫЕ НА ЭКЗЕМПЛЯРЕ
+
+// Все публичное становиться достоянием экземпляров
+
+// =====================================================================================================================
+
+// ГЕТТЕРЫ И СЕТТЕРЫ
+
+// Геттеры и сеттеры - это более краткий синтаксис объявления методов для взаимодействия со свойствами. 
+// Геттер и сеттер имитируют обычное публичное свойство класса, 
+// но позволяют изменять другие свойства более удобным способом. 
+// Геттер выполняется при попытке получить значение свойства, а сеттер - при попытке его изменить.
+// Геттеры и сеттеры хорошо использовать для простых операций чтения и изменения значения свойств, 
+// особенно приватных, как их публичный интерфейс. 
+// Для работы со свойством которое хранит массив или объект они не подойдут.
+
+// =====================================================================================================================
+
+// ПРАКТИЧЕСКОЕ ЗАНЯТИЕ 1
+
+// this - Контекст вызова
+// this - это тот кто вызывает функцию
+// Не важно где обьявлена ф-ция, важно кто ее вызывает
+
+// ============================================
+// this in global functions and global scope
+
+// const sayHello = () => {
+//     console.log("sayHello", this);
+// };
+
+// function sayHello() {
+//     console.log("sayHello", this);
+// }
+
+// sayHello();
+// this.sayHello();
+// window.sayHello();
+
+// ============================================
+// this in objects and methods
+
+// let vova = {
+//     name: "Vova",
+//     age: 25,
+//     status: "Moderator",
+
+//     say() {
+//         console.log(this);
+//         // this.showInfo();
+//     },
+
+//     showInfo() {
+//         console.log(this.name, this.age, this.status);
+//     },
+// };
+
+// vova.showInfo();
+// vova.say();
+
+// ======================================
+// this in callback functions lost contecst
+// let vova = {
+//     name: "Vova",
+//     age: 25,
+//     status: "Moderator",
+
+//     showInfo() {
+//         console.log(this.name, this.age, this.status);
+//     },
+// };
+
+// function greetUser(clb) {
+//     console.log(`Викликаю clb з greetUser ${clb()}`);
+// }
+
+// greetUser(vova.showInfo);
+// vova.showInfo();
+
+// ======================================
+// this in arrow functions контекст береться з місця її написання
+
+// const greet = () => {
+//     console.log("greet", this);
+// };
+// greet();
+
+// let vova = {
+//     name: "Vova",
+//     age: 25,
+//     status: "Moderator",
+
+//     showInfo() {
+//         const greet = () => {
+//             console.log("greet", this);
+//         };
+
+//         greet(); // vova
+//     },
+// };
+
+// vova.showInfo();
+
+// ---------------------------------------------------
+
+// // const greet = () => {
+// //     console.log("greet", this);
+// // };
+// // greet();
+
+// let vova = {
+//     name: "Vova",
+//     age: 25,
+//     status: "Moderator",
+
+//     // showInfo() {
+//     //     console.log("showInfo", this);
+//     // },
+
+//     // showInfo: function () {
+//     //     console.log("showInfo", this);
+//     // },
+
+//     showInfo: () => {
+//         console.log("showInfo", this);
+//     },
+// };
+
+// vova.showInfo();
+
+//-------------------------------------------------
+
+// const greet = () => {
+//     console.log("greet", this);
+// };
+
+// let vova = {
+//     name: "Vova",
+//     age: 25,
+//     status: "Moderator",
+
+//     greet,
+// };
+
+// vova.greet();
+
+// =============================================
+// this in event listeners
+// nevet use this in eventListeners use event.target
+
+// const btn = document.querySelector("button");
+// btn.addEventListener("click", () => {
+//     console.log(this);
+// });
+
+// btn.addEventListener("click", function () {
+//     console.log(this);
+// });
+
+// ======================================
+//  this in ES5 Clases
+// function User(name, age) {
+//     this.name = name;
+//     this.age = age;
+
+//     this.showInfo = function () {
+//         console.log(this.name, this.age);
+//     };
+// }
+
+// const vova = new User("Vova", 25);
+// const sara = new User("Sara", 30);
+// vova.showInfo();
+// sara.showInfo();
+
+// ==================================
+// this in ES6 Clases
+// class User {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     showInfo() {
+//         console.log(this.name, this.age);
+//     }
+// }
+
+// const vova = new User("Vova", 25);
+// const sara = new User("Sara", 30);
+// vova.showInfo();
+// sara.showInfo();
+
+// ====================================
+
+// function fnA() {
+//     console.log("fnA");
+
+//     function fnB() {
+//         console.log("fnB");
+//     }
+
+//     fnB();
+// }
+
+// fnA();
