@@ -61,3 +61,62 @@
 // console.log(image.getAttribute("alt")); // Amazing nature
 
 // ==========================
+
+// const saveBtn = document.querySelector('.editor button[data-action="save"]');
+// const closeBtn = document.querySelector('.editor button[data-action="close"]');
+
+// console.log(saveBtn.dataset.action); //save
+// console.log(closeBtn.dataset.action); //close
+
+// const dishes = document.querySelectorAll(".dishes > li");
+// dishes.forEach((dish) => {
+//   console.log(dish.dataset.id);
+// });
+
+// ==========================
+
+// const list = document.querySelector(".usernames");
+
+// // Adds an item to the end of the list
+// const lastItem = document.createElement("li");
+// lastItem.textContent = "Poly";
+// list.append(lastItem);
+
+// // Adds an item to the beginning of the list
+// const firstItem = document.createElement("li");
+// firstItem.textContent = "Ajax";
+// list.prepend(firstItem);
+
+// // Adds a title before the list
+// const title = document.createElement("h2");
+// title.textContent = "USERNAMES";
+// list.before(title);
+
+// // Adds a paragraph after the list
+// const text = document.createElement("p");
+// text.textContent =
+//   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur assumenda fugiat maxime, soluta aspernatur quasi nihil in asperiores ad distinctio illo et debitis error iure voluptate numquam maiores nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur assumenda fugiat maxime, soluta aspernatur quasi nihil in asperiores ad distinctio illo et debitis error iure voluptate numquam maiores nisi!";
+// list.after(text);
+
+// ==========================
+/* <article class="article">
+  <h2 class="title">Article title</h2>
+  <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, ipsa quibusdam! Praesentium accusantium fugiat distinctio quidem minima fugit eos, veniam, nam laboriosam deleniti nisi qui neque explicabo perspiciatis, consectetur non.</p>
+<a class="link" href="">Read more</a>
+</article> */
+// ==========================
+// const text = document.querySelector('.text');
+// text.remove();
+// ==========================
+const article = document.querySelector(".article");
+console.log(article.innerHTML);
+
+const title = document.querySelector(".article .title");
+console.log(title.innerHTML);
+
+const text = document.querySelector(".article .text");
+console.log(text.innerHTML);
+
+const link = document.querySelector(".article .link");
+console.log(link.innerHTML);
+// ==========================
