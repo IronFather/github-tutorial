@@ -108,15 +108,73 @@
 // const text = document.querySelector('.text');
 // text.remove();
 // ==========================
-const article = document.querySelector(".article");
-console.log(article.innerHTML);
+// const article = document.querySelector(".article");
+// console.log(article.innerHTML);
 
-const title = document.querySelector(".article .title");
-console.log(title.innerHTML);
+// const title = document.querySelector(".article .title");
+// console.log(title.innerHTML);
 
-const text = document.querySelector(".article .text");
-console.log(text.innerHTML);
+// const text = document.querySelector(".article .text");
+// console.log(text.innerHTML);
 
-const link = document.querySelector(".article .link");
-console.log(link.innerHTML);
+// const link = document.querySelector(".article .link");
+// console.log(link.innerHTML);
+// ==========================
+// const title = document.querySelector(".article .title");
+// title.innerHTML = 'New and <span class="accent">improved</span> title';
+// ==========================
+// const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
+// const list = document.querySelector(".list");
+
+// const markup = technologies
+//   .map((technology) => `<li class="list-item">${technology}</li>`)
+//   .join("");
+
+// // Check the console, you'll see a single string with HTML tags
+// console.log(markup);
+
+// // Adding all the markup in one operation
+// list.innerHTML = markup;
+// ==========================
+// const article = document.querySelector(".article");
+// const htmlString = `<p class="article-text">Nullam quis ante. Vestibulum dapibus nunc ac augue. In consectetuer turpis ut velit.</p>
+//    <a class="link" href="#">Read more...</a>`;
+
+// // Replace += with = operator. See the difference? 
+// // Article title is lost because we overwrite element content.
+// article.innerHTML += htmlString;
+
+// ==========================
+// const list = document.querySelector(".list");
+
+// const newTechnologies = ["React", "TypeScript", "Node.js"];
+// const markup = newTechnologies
+//   .map((technology) => `<li class="list-item new">${technology}</li>`)
+//   .join("");
+
+// list.insertAdjacentHTML("beforeend", markup);
+// list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
+
+
+// +++++++++++++++ Р Е П Е Т А +++++++++++++++
+
+const magicBtn = document.querySelector('.js-magic-btn');
+
+/*
+ * document.querySelector(selector) и document.querySelectorAll(selector)
+ *   selector - любой валидный CSS-селектор
+ *
+ * Что возвращают?
+ */
+
+const navEl = document.querySelector('.site-nav');
+console.log('navEl', navEl);
+
+const navLinksEl = document.querySelectorAll('.site-nav__link');
+console.log('navLinksEl', navLinksEl);
+
+/*
+ * Document.querySelector* и Element.querySelector*
+ */
+
 // ==========================
