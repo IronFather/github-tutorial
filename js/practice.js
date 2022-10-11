@@ -169,3 +169,232 @@
 
 //=====================================
 
+// Check clases
+{
+    /* <h1 class="heading main__title" id="title">Main titile</h1> */
+}
+
+const h1Ref = document.querySelector("h1");
+
+// console.log(h1Ref);
+// console.log(h1Ref.classList); // DOMTokenList
+// console.log(h1Ref.classList.length); // DOMTokenList
+// console.log(h1Ref.classList.contains("main__title")); // DOMTokenList
+// console.log(h1Ref.classList.contains("pizza")); // DOMTokenList
+//=======================================
+// Add class
+
+// h1Ref.classList.add("green");
+h1Ref.classList.add("red");
+
+//=================================
+// Remove class
+// h1Ref.classList.remove("green");
+
+// =================================
+// Toggle
+// если нету - добвляет
+// если есть - убирает
+// h1Ref.classList.toggle("green");
+
+// =================================
+// Replace
+
+// if (h1Ref.classList.contains("red")) {
+//     h1Ref.classList.add("super--class");
+// }
+// =================================
+{
+    /* <div id="links">
+    <a class="link__google" href="http://google.com">Google</a>
+    <br />
+    <a class="link__yahoo" href="http://yahoo.com">Yahoo</a>
+    <br />
+    <a class="link__css" href="/Lesson_02.HTML_CSS/html/news.html">News page</a>
+</div> */
+}
+
+// ========================
+// Set Attibute
+
+// const yahhoRef = document.querySelectorAll("a")[1];
+// yahhoRef.setAttribute("target", "_blank");
+// console.log(yahhoRef);
+
+// const imgRef = document.querySelectorAll("img");
+
+// imgRef.forEach((img) => {
+//     img.setAttribute("width", 150);
+//     img.setAttribute("alt", "meal");
+// });
+//====================================
+// Only for links and images
+
+// const imgRef = document.querySelectorAll("img");
+
+// imgRef.forEach((img) => {
+//     img.alt = "food";
+//     img.width = 250;
+// });
+
+// const yahhoRef = document.querySelectorAll("a")[1];
+// yahhoRef.target = "_blank";
+
+// =============================
+// Get Attribute
+
+// const yahhoRef = document.querySelectorAll("a")[1];
+// const href = yahhoRef.getAttribute("href");
+
+// console.log(href);
+// =============================
+
+// innerText
+// textContent
+// innerHeight
+// innerWidth
+// innerHtml
+
+// const h1 = document.querySelector("#title");
+// console.log(h1);
+
+// h1.innerText = "Hello";
+// h1.textContent = "Hello i am main";
+
+// const ulRef = document.querySelectorAll(".list")[2];
+// console.log(ulRef);
+
+// const liRef = ulRef.querySelectorAll("li")[0];
+// liRef.textContent = "Pizza 100";
+// liRef.innerText = "Pizza Plus";
+
+// ===================================
+// const h1 = document.querySelector("#title");
+// h1.innerHTML = '<span style="color: teal" class="span__class">Some text</span>';
+
+// const ulRef = document.querySelectorAll(".list")[2];
+
+// let html = "";
+// const friends = [
+//     { id: 1, name: "Vova", age: 20, budget: 2400, isComplete: true },
+//     { id: 2, name: "Sara", age: 25, budget: 3500, isComplete: false },
+//     { id: 3, name: "Mike", age: 30, budget: 300, isComplete: true },
+//     { id: 4, name: "Bob", age: 18, budget: 200, isComplete: false },
+// ];
+
+// friends.forEach(({ name }) => {
+//     html += `<li class"list__item">${name}</li>`;
+// });
+
+// ulRef.innerHTML = html;
+
+// ========================
+
+// const h1 = document.querySelector("#title");
+// h1.insertAdjacentElement
+// h1.insertAdjacentHTML
+// h1.insertAdjacentText
+
+// h1.insertAdjacentHTML('afterbegin')
+// h1.insertAdjacentHTML('afterend')
+// h1.insertAdjacentHTML('beforebegin')
+// h1.insertAdjacentHTML('beforeend')
+
+// h1.insertAdjacentHTML(
+//     "beforeend",
+//     '</br><span style="color: teal" class="span__class">Some text</span>'
+// );
+// ========================
+
+// document.body.style.display = "";
+
+// const h1 = document.querySelector("#title");
+// h1.style.color = "green";
+// h1.style.fontSize = "75px";
+// h1.style.textDecoration = "underline";
+// h1.style.backgroundColor = "teal";
+
+// ========================
+
+/*
+Create any element algorythm
+1. document.createElement()
+2. document.setAtribute and clases
+3. add Text (если нужно);
+4. Insert into dom(привяжи в DOM, свяжи с другим элементом)
+*/
+
+// const aRef = document.createElement("a");
+// console.log(aRef);
+
+// aRef.href = "https://tproger.ru/translations/configure-webpack4/";
+// aRef.target = "_blank";
+// aRef.classList.add("super__link");
+
+// aRef.textContent = "webpack4";
+
+// const divLinksRef = document.querySelector("#links");
+// console.log(divLinksRef);
+// divLinksRef.append(aRef);
+
+// document.body.append
+// document.body.prepend
+// document.body.before
+// document.body.after
+
+// document.body.append(aRef);
+
+// ====================================
+// const imgRef = document.createElement("img");
+
+// imgRef.src =
+//     "https://images.pexels.com/photos/2108837/pexels-photo-2108837.jpeg?auto=compress&cs=tinysrgb&w=1600";
+
+// imgRef.alt = "kebab";
+// imgRef.width = 450;
+
+// const imgSectionRef = document.querySelector(".images__examples");
+// imgSectionRef.append(imgRef);
+
+// ====================================
+
+
+/*
+Create any element algorythm
+1. document.createElement()
+2. document.setAtribute and clases
+3. add Text (если нужно);
+4. Insert into dom(привяжи в DOM, свяжи с другим элементом)
+*/
+
+// const aRef = document.createElement("a");
+// console.log(aRef);
+
+// aRef.href = "https://tproger.ru/translations/configure-webpack4/";
+// aRef.target = "_blank";
+// aRef.classList.add("super__link");
+
+// aRef.textContent = "webpack4";
+
+// const divLinksRef = document.querySelector("#links");
+// console.log(divLinksRef);
+// divLinksRef.append(aRef);
+
+// document.body.append
+// document.body.prepend
+// document.body.before
+// document.body.after
+
+// document.body.append(aRef);
+
+// ====================================
+// const imgRef = document.createElement("img");
+
+// imgRef.src =
+//     "https://images.pexels.com/photos/2108837/pexels-photo-2108837.jpeg?auto=compress&cs=tinysrgb&w=1600";
+
+// imgRef.alt = "kebab";
+// imgRef.width = 450;
+
+// const imgSectionRef = document.querySelector(".images__examples");
+// imgSectionRef.append(imgRef);
