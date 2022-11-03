@@ -11,7 +11,7 @@
 
 // const fnA = function (message, callback) {
 //     console.log(callback);
-//     callback(100);
+//     callback(200);
 // };
 
 // const fnB = function (number) {
@@ -19,6 +19,8 @@
 // }
 
 // fnA (`rregtgt`, fnB)
+
+// fnB(350)
 
 // ======================================================================================
 
@@ -37,7 +39,7 @@
 // }
 
 // doMath (1235, 4326, addMath);
-// doMath (765, 349, subMath);
+// doMath (3452, 349, subMath);
 
 // ======================================================================================
 

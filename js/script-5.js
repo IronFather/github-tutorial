@@ -36,12 +36,12 @@
   
 //   // Записываем ссылку на функцию в свойство объекта
 //   // Обратите внимание, что это не вызов - нет ()
-//   user.showContext = showThis;
+  // user.showContext = showThis;
   
 //   // Вызываем функцию в контексте объекта
 //   // this будет указывать на текущий объект, в контексте
 //   // которого осуществляется вызов, а не на глобальный объект.
-//   user.showContext(); // this in showThis: {username: "Mango", showContext: ƒ}
+  // user.showContext(); // this in showThis: {username: "Mango", showContext: ƒ}
 
 // =================================================================================================
 
@@ -54,7 +54,7 @@
 //   };
   
 //   function makeMessage(callback) {
-//     // callback() это вызов метода getFullName без объекта
+// //     // callback() это вызов метода getFullName без объекта
 //     console.log(`Обрабатываем заявку от ${callback()}.`);
 //   }
   
@@ -486,27 +486,29 @@
  * - Через Object.create() нельзя привязать уже созданный объект - плохая практика !!!
  * 
  * Переписать свойство своего прототипа невозможно, это приведет к созданию собственного
+ * 
+ * 
  * - [[Prototype]] и __proto__
  * - Object.getPrototypeOf()
  * - Собственные свойства и Object.prototype.hasOwnProperty()
  * - Цепочка прототипов
  */
 
-// const objC = {
-//   z: 5,
-// };
+const objC = {
+  z: 5,
+};
 
-// console.log(objC);
+console.log(objC);
 
-// const objB = Object.create(objC);
-// objB.y = 2;
+const objB = Object.create(objC);
+objB.y = 2;
 
-// const objA = Object.create(objB);
-// objA.x = 1;
+const objA = Object.create(objB);
+objA.x = 1;
 
-// console.log(objA.z);
+console.log(objA.z);
 
-// console.log('objA', objA);
+console.log('objA', objA);
 
 // console.log(objA.hasOwnProperty('x'));
 
@@ -914,3 +916,5 @@
 // }
 
 // fnA();
+
+// console.log(this);

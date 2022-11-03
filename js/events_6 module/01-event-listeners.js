@@ -9,9 +9,9 @@
  * - Объект события
  */
 
-const targetBtn = document.querySelector('.js-target-btn');
-const addListenerBtn = document.querySelector('.js-add-listener');
-const removeListenerBtn = document.querySelector('.js-remove-listener');
+// const targetBtn = document.querySelector('.js-target-btn');
+// const addListenerBtn = document.querySelector('.js-add-listener');
+// const removeListenerBtn = document.querySelector('.js-remove-listener');
 
 // addListenerBtn.addEventListener('click', event => {
 //   console.log(event);
