@@ -89,3 +89,64 @@ const magicBtn = document.querySelector('.js-magic-btn');
 // console.log(articleDescEl);
 
 // =============================================================================================== -->
+
+// const textEl = document.querySelector(`#paragraph`);
+
+// console.log(textEl.classList.contains(`big`));
+// console.log(textEl.classList.contains(`blue`));
+
+// console.table(textEl.classList);
+
+// textEl.classList.add(`asdfg`);
+// console.table(textEl.classList);
+
+// const asdfgEl = document.querySelector(`.asdfg`);
+// asdfgEl.style.color = `red`;
+// asdfgEl.style.textTransform = `uppercase`;
+
+// console.log(asdfgEl.textContent);
+
+// textEl.classList.remove(`big`);
+// console.table(textEl.classList);
+
+// textEl.classList.replace(`blue`, `yellow`);
+// console.table(textEl.classList);
+
+// =============================================================================================== -->
+
+// const upperEl = document.querySelector(`.article-title`);
+
+// upperEl.style.textTransform = `uppercase`;
+// upperEl.style.color = `green`;
+// upperEl.style.fontSize = `58px`;
+// upperEl.style.textAlign = "center";
+// =============================================================================================== -->
+
+
+// const imageEl = document.querySelector(".image");
+
+// imageEl.classList.add(`super`);
+// console.log(imageEl.classList);
+
+// console.log(imageEl.attributes);
+// console.log(imageEl.hasAttribute(`src`));
+
+
+
+// console.log(image.attributes); // NamedNodeMap {0: class, 1: src, 2: alt, length: 3}
+
+// console.log(image.hasAttribute("src")); // true
+
+// console.log(imageEl.getAttribute("alt")); // "Lake and clouds"
+
+// imageEl.removeAttribute(`alt`);
+// imageEl.setAttribute(`alt`, `ohohohoho`);
+// console.log(imageEl.attributes);
+// console.log(imageEl.hasAttribute(`alt`));
+// console.log(imageEl.getAttribute(`alt`));
+
+// imageEl.setAttribute("alt", "Amazing nature");
+
+// console.log(image.getAttribute("alt")); // Amazing nature
+
+// =============================================================================================== -->
