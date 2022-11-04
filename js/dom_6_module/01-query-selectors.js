@@ -150,3 +150,96 @@ const magicBtn = document.querySelector('.js-magic-btn');
 // console.log(image.getAttribute("alt")); // Amazing nature
 
 // =============================================================================================== -->
+
+
+// const openBtnEl = document.querySelector(`button[data-action="open"]`);
+// console.log(openBtnEl);
+
+// const closeBtnEl = document.querySelector(`button[data-action="close"]`);
+// console.log(closeBtnEl);
+
+// console.log(openBtnEl.dataset.action);
+// console.log(closeBtnEl.dataset.action);
+
+const dishesEl = document.querySelector(`.dishes`);
+
+// dishesEl.forEach((dish) => {
+//     console.log(dish.dataset.id);
+// })
+
+// =============================================================================================== -->
+
+// const newPEl = document.createElement(`p`);
+// console.log(newPEl);
+
+// newPEl.textContent = `I want to be an Ironman`;
+// console.log(newPEl.textContent);
+
+// const newImgEl = document.createElement(`img`);
+// newImgEl.src = `https://placeimg.com/640/480/nature`;
+// newImgEl.alt = `very cool`
+// newImgEl.classList.add(`card`);
+// console.log(newImgEl.attributes);
+
+
+// const liEl = document.querySelector(`.dishes > li[data-id="7"]`)
+// liEl.after(newImgEl)
+// =============================================================================================== -->
+
+// const list = document.querySelector(".usernames");
+
+// // Adds an item to the end of the list
+// const lastItem = document.createElement("li");
+// lastItem.textContent = "Poly";
+// list.append(lastItem);
+
+// // Adds an item to the beginning of the list
+// const firstItem = document.createElement("li");
+// firstItem.textContent = "Ajax";
+// list.prepend(firstItem);
+
+// // Adds a title before the list
+// const title = document.createElement("h2");
+// title.textContent = "USERNAMES";
+// list.before(title);
+
+// // Adds a paragraph after the list
+// const text = document.createElement("p");
+// text.textContent =
+//   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur assumenda fugiat maxime, soluta aspernatur quasi nihil in asperiores ad distinctio illo et debitis error iure voluptate numquam maiores nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur assumenda fugiat maxime, soluta aspernatur quasi nihil in asperiores ad distinctio illo et debitis error iure voluptate numquam maiores nisi!";
+// list.after(text);
+// =============================================================================================== -->
+
+// const article = document.querySelector(".article");
+// console.log(article.innerHTML);
+
+// const title = document.querySelector(".article .title");
+// console.log(title.innerHTML);
+
+// const text = document.querySelector(".article .text");
+// console.log(text.innerHTML);
+
+// const link = document.querySelector(".article .link");
+// console.log(link.innerHTML);
+// =============================================================================================== -->
+
+// const qwe = document.querySelector(`.article .link`);
+// console.log(qwe.innerHTML);
+// =============================================================================================== -->
+// const newTitleEl = document.querySelector(`.article .title`);
+
+// newTitleEl.innerHTML = `Yurii Yashchuk will be ready for new job`;
+
+// =============================================================================================== -->
+
+
+// =============================================================================================== -->
+
+
+// =============================================================================================== -->
+
+
+// =============================================================================================== -->
+
+
+// =============================================================================================== -->
