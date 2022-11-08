@@ -1,4 +1,4 @@
-const magicBtn = document.querySelector('.js-magic-btn');
+// const magicBtn = document.querySelector('.js-magic-btn');
 
 /*
  * document.querySelector(selector) и document.querySelectorAll(selector)
@@ -232,10 +232,120 @@ const dishesEl = document.querySelector(`.dishes`);
 
 // =============================================================================================== -->
 
+// const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
+// const list = document.querySelector(".list");
+
+// const markup = technologies
+//   .map((technology) => `<li class="list-item">${technology}</li>`)
+//   .join("")
+  
+
+// // Check the console, you'll see a single string with HTML tags
+// console.log(markup);
+
+// // // Adding all the markup in one operation
+// list.innerHTML = markup;
 
 // =============================================================================================== -->
 
+// const article = document.querySelector(".article");
+// const htmlString = `<p class="article-text">Nullam quis ante. Vestibulum dapibus nunc ac augue. In consectetuer turpis ut velit.</p>
+//    <a class="link" href="#">Read more...</a>`;
 
+//    console.log(htmlString);
+
+// // Replace += with = operator. See the difference? 
+// // Article title is lost because we overwrite element content.
+// article.innerHTML += htmlString;
+
+// const newImgEl = `<img class="image">Ironman</img>`;
+
+// article.innerHTML += newImgEl;
+// =============================================================================================== -->
+// const list = document.querySelector(".list");
+// const listEl = document.querySelector(`.list`);
+// console.log(listEl);
+
+// const newTechEl = ["React", "TypeScript", "Node.js"];
+// const markupEl = newTechEl.map((newTech) => `<li class="new item">${newTech}</li>`).join("");
+
+
+// // const newTechnologies = ["React", "TypeScript", "Node.js"];
+// // const markup = newTechnologies
+// //   .map((technology) => `<li class="list-item new">${technology}</li>`)
+// //   .join("");
+
+// listEl.insertAdjacentHTML("beforeend", markupEl);
+// listEl.insertAdjacentHTML("beforebegin", "<h2>newTechnologies</h2>");
+
+// list.insertAdjacentHTML("beforeend", markup);
+// list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
+
+// =============================================================================================== -->
+
+// console.dir(document);
+// 6.1.2 =============================================================================================== -->
+
+const magicBtn = document.querySelector('.js-magic-btn');
+
+/*
+ * Свойства элемента (hero)
+ * - Изображение
+ * - Текст и textContent
+ * https://images.pexels.com/photos/1870376/pexels-photo-1870376.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=480
+//  */
+
+// const imageEl = document.querySelector('.hero__image');
+// // console.log('imageEl', imageEl);
+// imageEl.src =
+//   'https://images.pexels.com/photos/1870376/pexels-photo-1870376.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=480';
+// imageEl.alt = 'Это новый котик';
+
+// const heroTitleEl = document.querySelector('.hero__title');
+// // console.log('heroTitleEl', heroTitleEl);
+// heroTitleEl.textContent = 'Я сладкий пирожочек!';
+
+// /*
+//  * Атрибуты
+//  * - get(имя-атрибута)
+//  * - set(имя-атрибута)
+//  * - remove(имя-атрибута)
+//  * - has(имя-атрибута)
+//  */
+
+// // console.log(imageEl.getAttribute('src'));
+// // console.log(imageEl.src);
+// // console.log(imageEl.hasAttribute('src'));
+
+// /*
+//  * Data-атрибуты
+//  */
+// const actions = document.querySelectorAll('.js-actions button');
+// console.log(actions);
+// console.log(actions[2].dataset.action);
+// console.log(actions[1].dataset.action);
+// console.log(actions[0].dataset);
+
+// 6.1.3 =============================================================================================== -->
+
+const magicBtnEl = document.querySelector('.js-magic-btn');
+/*
+ * Интерфейс classList
+ * - add(класс)
+ * - remove(класс)
+ * - toggle(класс)
+ * - replace(старыйКласс, новыйКЛасс)
+ * - contains(класс)
+ */
+
+const currentPageUrl = '/contact';
+
+const linkEl = document.querySelector(
+  `.site-nav__link[href="${currentPageUrl}"]`,
+);
+
+console.log(linkEl);
+// linkEl.classList.add('site-nav__link--current');
 // =============================================================================================== -->
 
 
