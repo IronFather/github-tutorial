@@ -1,6 +1,6 @@
 /* 2-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
-body {
+/* body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,11 +8,14 @@ body {
     min-height: 100vh;
     padding: 1rem;
     text-align: center;
-  }
+  } */
 
-/* 1-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* 4-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
-
+body {
+  padding: 16px;
+  text-align: center;
+}
 /* 1-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 

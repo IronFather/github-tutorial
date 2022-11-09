@@ -42,8 +42,13 @@ const secondCb = () => {
 }
 
 const thirdCb = () => {
-    console.log(`Перший пішов`);
+    console.log(`Це вже нахабство!`);
 }
+
+multiBtn.addEventListener(`click`, firstCb);
+multiBtn.addEventListener(`click`, secondCb);
+multiBtn.addEventListener(`click`, thirdCb);
+
 
 // const multiBtn = document.querySelector("#multiple");
 
