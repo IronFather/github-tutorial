@@ -251,9 +251,24 @@
 //   event.currentTarget.reset();
 // }
 
-// 7-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+// change-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
+// const select = document.querySelector(".pizza-select");
+// const textOutput = document.querySelector(".text-output");
+// const valueOutput = document.querySelector(".value-output");
 
+// select.addEventListener("change", setOutput);
+
+// function setOutput() {
+//   const selectedOptionValue = select.value;
+//   const selectedOptionIndex = select.selectedIndex;
+//   const selectedOptionText = select.options[selectedOptionIndex].text;
+
+//   textOutput.textContent = selectedOptionText;
+//   valueOutput.textContent = selectedOptionValue;
+// }
+
+// setOutput();
 
 // 7-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
