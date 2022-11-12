@@ -643,6 +643,36 @@ const boxEl = document.querySelector('.js-box');
 
 // 06-modal.js-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
+const refs = {
+openModalBtnEl: document.querySelector(`[data-action="open-modal"]`),
+closeModalBtnEl: document.querySelector(`[data-action="close-modal"]`),
+backdropEl: document.querySelector(`.js-backdrop`),
+}
+
+refs.openModalBtnEl.addEventListener(`click`, onOpenModal);
+refs.closeModalBtnEl.addEventListener(`click`, onCloseModal);
+refs.backdropEl.addEventListener(`click`, onBackdropClick);
+
+function onOpenModal() {
+    document.body.classList.add(`show-modal`);
+}
+
+function onCloseModal() {
+    document.body.classList.remove(`show-modal`)
+}
+
+function onBackdropClick() {
+    console.log(`клик по бекдроп`);
+
+    console.log(event.currentTarget);
+    console.log(event.target);
+
+    if(event.currentTarget === event.turget) {
+        console.log(`я попал в бекдроп)`);
+    }
+
+}
+
 // ---------------------------------------------------
 
 /*
