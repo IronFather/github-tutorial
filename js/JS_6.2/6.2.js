@@ -643,35 +643,53 @@ const boxEl = document.querySelector('.js-box');
 
 // 06-modal.js-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-const refs = {
-openModalBtnEl: document.querySelector(`[data-action="open-modal"]`),
-closeModalBtnEl: document.querySelector(`[data-action="close-modal"]`),
-backdropEl: document.querySelector(`.js-backdrop`),
-}
+// const refs = {
+// openModalBtnEl: document.querySelector(`[data-action="open-modal"]`),
+// closeModalBtnEl: document.querySelector(`[data-action="close-modal"]`),
+// backdropEl: document.querySelector(`.js-backdrop`),
+// }
 
-refs.openModalBtnEl.addEventListener(`click`, onOpenModal);
-refs.closeModalBtnEl.addEventListener(`click`, onCloseModal);
-refs.backdropEl.addEventListener(`click`, onBackdropClick);
+// refs.openModalBtnEl.addEventListener(`click`, onOpenModal);
+// refs.closeModalBtnEl.addEventListener(`click`, onCloseModal);
+// refs.backdropEl.addEventListener(`click`, onBackdropClick);
 
-function onOpenModal() {
-    document.body.classList.add(`show-modal`);
-}
 
-function onCloseModal() {
-    document.body.classList.remove(`show-modal`)
-}
+// function onOpenModal() {
+//     window.addEventListener(`keydown`, onEscKeydown);
+//     document.body.classList.add(`show-modal`);
+// }
 
-function onBackdropClick() {
-    console.log(`клик по бекдроп`);
+// function onCloseModal() {
+//     window.removeEventListener(`keydown`, onEscKeydown);
+//     document.body.classList.remove(`show-modal`)
+// }
 
-    console.log(event.currentTarget);
-    console.log(event.target);
+// function onBackdropClick(event) {
+//     // console.log(`клик по бекдроп`);
 
-    if(event.currentTarget === event.turget) {
-        console.log(`я попал в бекдроп)`);
-    }
+//     console.log(event.currentTarget);
+//     console.log(event.target);
 
-}
+//     if (event.currentTarget === event.target) {
+//         console.log(`я попал в бекдроп)`);
+//         onCloseModal();
+//     }
+// }
+
+// function onEscKeydown(event) {
+//     console.log(event);
+//     if(event.code === `Escape`) {
+//     onCloseModal();
+//     }
+// }
+
+
+// function onEscKeydown(event) {
+//     const ESC_KEY_CODE = `Escape`;
+//     if(event.code === ESC_KEY_CODE) {
+//     onCloseModal();
+//     }
+// }
 
 // ---------------------------------------------------
 
