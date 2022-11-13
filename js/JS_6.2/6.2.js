@@ -757,66 +757,66 @@
 
 // -6.2.-МОДАЛЬНОЕ ОКНО-ЗАНКИЕВ_ЗАДАЧА-1-&&&&&&&&&&&&&&&&&&&&&&
 
-const loginModalButton = document.querySelector("#login-button");
-const loginModal = document.querySelector(".modal-wrapper");
-const title = document.querySelector("h2");
-const error = document.querySelector(".form-error");
-const loginForm = document.querySelector("#login-form");
-const loginModalCloseButton = document.querySelector(
-	".modal-wrapper .close-button"
-);
-const loginModalOverlay = document.querySelector(".modal-wrapper .overlay");
+// const loginModalButton = document.querySelector("#login-button");
+// const loginModal = document.querySelector(".modal-wrapper");
+// const title = document.querySelector("h2");
+// const error = document.querySelector(".form-error");
+// const loginForm = document.querySelector("#login-form");
+// const loginModalCloseButton = document.querySelector(
+// 	".modal-wrapper .close-button"
+// );
+// const loginModalOverlay = document.querySelector(".modal-wrapper .overlay");
 
-const onEscapePress = (e) => {
-	if (e.code === "Escape" && isLoginModalWindowOpen()) {
-		closeLoginModalWindow();
-	}
-};
+// const onEscapePress = (e) => {
+// 	if (e.code === "Escape" && isLoginModalWindowOpen()) {
+// 		closeLoginModalWindow();
+// 	}
+// };
 
-const closeLoginModalWindow = () => {
-	loginModal.classList.add("hidden");
-	document.removeEventListener("keyup", onEscapePress);
-	loginForm.reset();
+// const closeLoginModalWindow = () => {
+// 	loginModal.classList.add("hidden");
+// 	document.removeEventListener("keyup", onEscapePress);
+// 	loginForm.reset();
 
-	if (!error.classList.contains("hidden")) {
-		error.classList.add("hidden");
-	}
-};
+// 	if (!error.classList.contains("hidden")) {
+// 		error.classList.add("hidden");
+// 	}
+// };
 
-const showLoginModalWindow = () => {
-	loginModal.classList.remove("hidden");
+// const showLoginModalWindow = () => {
+// 	loginModal.classList.remove("hidden");
 
-	document.addEventListener("keyup", onEscapePress);
-};
+// 	document.addEventListener("keyup", onEscapePress);
+// };
 
-const isLoginModalWindowOpen = () => !loginModal.classList.contains("hidden");
+// const isLoginModalWindowOpen = () => !loginModal.classList.contains("hidden");
 
-loginModalButton.addEventListener("click", showLoginModalWindow);
+// loginModalButton.addEventListener("click", showLoginModalWindow);
 
-loginModalCloseButton.addEventListener("click", closeLoginModalWindow);
+// loginModalCloseButton.addEventListener("click", closeLoginModalWindow);
 
-loginModalOverlay.addEventListener("click", closeLoginModalWindow);
+// loginModalOverlay.addEventListener("click", closeLoginModalWindow);
 
-const correctLogin = "goit@gmail.com";
-const correctPasword = "1234";
+// const correctLogin = "goit@gmail.com";
+// const correctPasword = "1234";
 
-loginForm.addEventListener("submit", (event) => {
-	event.preventDefault();
+// loginForm.addEventListener("submit", (event) => {
+// 	event.preventDefault();
 
-	const data = new FormData(event.target);
-	const login = data.get("login");
-	const password = data.get("password");
+// 	const data = new FormData(event.target);
+// 	const login = data.get("login");
+// 	const password = data.get("password");
 
-	if (login === correctLogin && password === correctPasword) {
-		closeLoginModalWindow();
-		title.classList.remove("hidden");
-		loginModalButton.classList.add("hidden");
-	} else {
-		error.classList.remove("hidden");
-	}
+// 	if (login === correctLogin && password === correctPasword) {
+// 		closeLoginModalWindow();
+// 		title.classList.remove("hidden");
+// 		loginModalButton.classList.add("hidden");
+// 	} else {
+// 		error.classList.remove("hidden");
+// 	}
 
-	return data;
-});
+// 	return data;
+// });
 
 // =>
 // Задача 1.
