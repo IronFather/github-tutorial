@@ -1,3 +1,9 @@
+// MODULE 1
+
+
+
+
+
 // Всплытие событий-&&&&&&&&&&&&&&&&&&&&&&&&&&&& 1
 
 // const parent = document.querySelector("#parent");
